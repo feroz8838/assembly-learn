@@ -1,0 +1,13 @@
+jmp print
+
+print:
+mov ah,0xE
+mov si,storage
+dark:
+    lodsb 
+    or al,al
+    jz brk
+    int 10h
+    jmp dark   
+
+brk:
