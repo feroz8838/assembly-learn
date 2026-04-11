@@ -2,10 +2,6 @@ use16
 org 0x7c00
 
 ;
-mov ax,0
-mov es,ax
-mov ds,ax
-;
 mov di,storage
 mov ax, 3
 int 10h
@@ -25,8 +21,6 @@ je ent
 ent:
 mov al,0
 stosb
-jmp newline
-
 
 newline:
 mov ah,2
@@ -34,42 +28,59 @@ mov bh,0
 mov dl,0
 mov dh,[colm]
 int 10h
-
 add dh,2
 mov [colm],dh
 
 
+
+;enter key pressed or not 
+cld
+mov si,storage
+mov di,exit
+mov cx,5
+ repe cmpsb
+jz exitpressed
+
+
+
 mov ah,0xE
 mov si,storage
-dark:
+prnt:
     lodsb 
     or al,al
-    jz newline2
+    jz forenter
     int 10h
-    jmp dark   
+    jmp prnt   
 
-newline2:
+forenter:
 mov ah,2
 mov bh,0
 mov dl,0
 mov dh,[colm]
 int 10h
-inc dh
+add dh,1
 mov [colm],dh
 
 ;clearing storage
 mov di,storage
 mov al,0
-mov cx,50
+mov cx,30
 rep stosb
 mov di,storage
 
+;the closed infinite loop
 jmp lp
 
+exitpressed:
+jmp halt
+
+halt: ;the stopping label 
 cli 
 hlt
 
-storage: times 50 db 0
+storage: times 30 db 0
 colm db 1
+exit: db "exit",0
+exitl equ $ - exit
 times 510 -($-$$) db 0 
 dw 0xaa55
