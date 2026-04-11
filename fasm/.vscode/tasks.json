@@ -1,0 +1,11 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Run",
+            "type": "shell",
+            "command": "fasm ${file} ${fileBasenameNoExtension}.bin && qemu-system-x86_64 -fda ${fileBasenameNoExtension}.bin",
+            "group": "build"
+        }
+    ]
+}
