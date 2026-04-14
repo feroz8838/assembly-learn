@@ -2,15 +2,15 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug Assembly",
+      "name": "Debug Bootloader",
       "type": "gdb",
-      "request": "launch",
-      "target": ":1234",
+      "request": "attach",
+      "target":":1234",
+      "remote": true,
       "cwd": "${workspaceFolder}",
-      "remote": "true",
       "valuesFormatting": "parseText",
-      "autorun": [
-        "symbol-file videomem.elf ",
+      "autorun":[
+        "symbol-file nasm/videomem.elf",
         "set output-radix 16"
       ]
     }

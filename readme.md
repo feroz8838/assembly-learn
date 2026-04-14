@@ -29,7 +29,8 @@ If you can help by:
 * Improving structure
 * Suggesting better approaches
 
-Please feel free to contribute. Your help is appreciated!
+Please feel free to contribute. Your help is appreciated!. For those who are specialised in this field, please share me your opinions ideas about my code and feel free to correct me and my code if I am wrong in any places
+
 
 ## About the Code
 
@@ -40,24 +41,30 @@ Please feel free to contribute. Your help is appreciated!
 
 ### Day 1
 
-* Started the journey for learning/understanding Assembly
-* Created FASM bootloader program that just halts at the page
-* And learned the basic software level assembly
+* Started the journey for learning/understanding Assembly.
+* Created FASM bootloader program that just halts at the page.
+* And learned the basic software level assembly.
 
 ### Day 2
 
-* I get to store the inputs that i have entered using keyboard and print it  afterwards 
-* I am learning the basic string operations, and about the process of storing and loading string bytes
+* I get to store the inputs that i have entered using keyboard and print it  afterwards. 
+* I am learning the basic string operations, and about the process of storing and loading string bytes.
 
 ### Day 3
 
-* I get to learn about the cursor positions and can now move to nest line if enter key is pressed 
-* learned the basics Nasm and Fasm syntax , now I can differentiate it 
+* I get to learn about the cursor positions and can now move to nest line if enter key is pressed. 
+* learned the basics Nasm and Fasm syntax , now I can differentiate it. 
 
 ### Day 4
 
-* I finished the simple bootloader that justs stores whatever that is given as a input and halts when enterd exit 
-* for today I am learning about the special purpose registers and the general basics and about flags and stacks 
+* I finished the simple bootloader that justs stores whatever that is given as a input and halts when enterd exit. 
+* for today I am learning about the special purpose registers and the general basics and about flags and stacks. 
+
+### Day 5
+
+* I just learned about printing memory just by loading the characters into the video memory, whis is a lot easy compared to my previous efforts.
+* Today,I got to learn about the basics of networking in linux(completely irrespective of the repo , but its a lot educatonal too). 
+* For now I can debug the current assembly remotely using native debugger(gdb).
 
 *(Will keep updating...)*
 
