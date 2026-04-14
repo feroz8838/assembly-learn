@@ -66,7 +66,6 @@ Please feel free to contribute. Your help is appreciated!. For those who are spe
 * Today,I got to learn about the basics of networking in linux(completely irrespective of the repo , but its a lot educatonal too). 
 * For now I can debug the current assembly remotely using native debugger(gdb).
 
-*(Will keep updating...)*
 
 ## Goals
 
